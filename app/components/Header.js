@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-      <header className="bg-blue-600 text-white">
+      <header className="text-white">
         <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
           <h1 className="text-3xl font-bold">Sparkle Cleaning Co.</h1>
           <nav>
