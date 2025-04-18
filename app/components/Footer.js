@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">About Me</h3>
+            <h3 className="text-white text-lg font-semibold mb-4">Sparkle Cleaning Co</h3>
             <p className="text-sm">
               Trusted by Businesses Across the continent 
             </p>
