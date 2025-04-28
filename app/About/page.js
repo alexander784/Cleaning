@@ -18,8 +18,8 @@ export default function About() {
           your environment with professionalism and care.
         </p>
         <Link
-          href="/info"
-          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 shadow-md"
+          href="/Info"
+          className="inline-block bg-blue-400 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 shadow-md"
         >
           Contact Us
         </Link>

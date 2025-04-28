@@ -3,6 +3,7 @@ import Services from "./services/page";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Gallery from "./Gallery/page";
+import About from "./About/page";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       >
         <Hero />
       </div>
+      <About />
       <Services />
       <Gallery />
       <Contact />
