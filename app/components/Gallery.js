@@ -40,8 +40,11 @@ export default function Gallery() {
   return (
     <section id="gallery" className="bg-gray-200 py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our Work</h2>
-        {/* Carousel */}
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Our Work</h2>
+        <div className="flex flex-col sm:flex-row justify-between mb-8 text-lg font-medium text-gray-800">
+          <p className="text-center sm:text-left">Cleaning your house before moving in</p>
+          <p className="text-center sm:text-right">cleaning your sofas and deep cleaning</p>
+        </div>
         <div className="relative overflow-hidden w-full">
           <button
             onClick={scrollLeft}
@@ -66,7 +69,9 @@ export default function Gallery() {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="flex-none w-1/3 px-2"
+                className={`flex-none w-1/3 px-2 image-slide ${
+                  index < 3 ? `delay-${index}` : ""
+                }`}
                 style={{ width: `calc(33.333% - 1rem)` }}
               >
                 <div className="relative h-64 w-full">

@@ -12,7 +12,6 @@ export default function Home() {
         className="relative bg-cover bg-center h-screen"
         style={{ backgroundImage: "url('/images/Cleaning.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black opacity-40"></div>
         <Header />
         <Hero />
       </div>
