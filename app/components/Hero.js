@@ -1,13 +1,35 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
+  const images = ["/images/Cleaning.jpg", "/images/Cleaning2.avif", "/images/Clean.avif"];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval); 
+  }, []);
+
   return (
-    <section
-      className="relative text-white py-20 bg-cover bg-center h-screen"
-      style={{ backgroundImage: "url('/images/Cleaning.jpg')" }}
-    >
-      <div className="absolute inset-0 bg-black opacity-40"></div>
-      <div className="relative max-w-7xl mx-auto px-4 text-center">
+    <section className="relative text-white py-20 h-screen overflow-hidden">
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+          style={{
+            backgroundImage: `url(${image})`,
+            opacity: index === currentImageIndex ? 1 : 0,
+            zIndex: index === currentImageIndex ? 1 : 0,
+          }}
+        />
+      ))}
+      {/* Content */}
+      <div className="relative max-w-7xl mx-auto px-4 text-center z-20">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
           Professional Cleaning Services
         </h2>

@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="text-white bg-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-        <h1 className="text-3xl font-bold">Sparkle Cleaning Co.</h1>
+        <Link href="/" className="px-4 flex cursor-pointer font-bold">Sparkle Cleaning Co.</Link>
         <nav className="flex items-center">
           <ul className="flex items-center space-x-8">
             <div className="flex space-x-10">
